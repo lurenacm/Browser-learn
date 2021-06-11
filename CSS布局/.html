@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        width: 100px;
+        height: 100px;
+        background-color: aliceblue;
+    }
+    .td-left{
+        background-color:blue;
+    }
+    .td-right{
+        background-color: blueviolet;
+    }
+
+    .tableClass{
+        width: 100px;
+        height: 100px;
+        vertical-align: middle;
+        display: table;
+    }
+
+    .table-row{
+        display: table-row;
+    }
+    .table-cell-left{
+        display: table-cell;
+        background-color:blue;
+    }
+    .table-cell-right{
+        display: table-cell;
+        background-color:blueviolet;
+    }
+</style>
+<body>
+    <table>
+        <tr>
+            <td class="td-left">左</td>
+            <td class="td-right">右</td>
+        </tr>
+    </table>
+    <div class="tableClass">
+        <div class="table-row">
+            <div class="table-cell-left">左</div>
+            <div class="table-cell-right">右</div>
+        </div>
+    </div>
+</body>
+</html>
