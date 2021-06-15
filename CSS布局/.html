@@ -36,18 +36,53 @@
         display: table-cell;
         background-color:blueviolet;
     }
+
+    .container{
+        display: flex;
+        width: 800px;
+        height: 200px;
+        background-color: #CCC;
+    }
+    .flexbox1{
+        flex: 2;
+        width: 200px;
+        margin: 2px;
+        background-color: red;
+    }
+    .flexbox2{
+        flex: 1;
+        margin: 2px;
+        background-color: green;
+    }
 </style>
 <body>
-    <table>
+    <!-- <table>E
         <tr>
             <td class="td-left">左</td>
             <td class="td-right">右</td>
         </tr>
-    </table>
-    <div class="tableClass">
+    </table> -->
+    <!-- <div class="tableClass">
         <div class="table-row">
             <div class="table-cell-left">左</div>
             <div class="table-cell-right">右</div>
+        </div>
+    </div> -->
+    <div class="container">
+        <div class="flexbox1">
+            flex:2
+        </div>
+        <div class="flexbox2">
+            flex:1
+        </div>
+        <div class="flexbox2">
+            flex:1
+        </div>
+        <div class="flexbox2">
+            flex:1
+        </div>
+        <div class="flexbox2">
+            flex:1
         </div>
     </div>
 </body>
