@@ -54,6 +54,29 @@
         margin: 2px;
         background-color: green;
     }
+
+    .floatContainer{
+        width: 600px;
+        height: 200px;
+    }
+    .floatLeft{
+        float: left;
+        height: 100%;
+        width: 200px;
+        background-color: blue;
+    }
+    .middle{
+        background-color: red;
+        margin-left:200px;
+        margin-right: 200px;
+        height: 100%;
+    }
+    .floatRight{
+        float: right;
+        width: 200px;
+        background-color: beige;
+        height: 100%;
+    }
 </style>
 <body>
     <!-- <table>E
@@ -68,7 +91,7 @@
             <div class="table-cell-right">右</div>
         </div>
     </div> -->
-    <div class="container">
+    <!-- <div class="container">
         <div class="flexbox1">
             flex:2
         </div>
@@ -84,6 +107,12 @@
         <div class="flexbox2">
             flex:1
         </div>
+    </div> -->
+
+    <div class="floatContainer">
+        <div class="floatLeft">float left</div>
+        <div class="floatRight">float Right</div>
+        <div class="middle">middle</div>
     </div>
 </body>
 </html>
