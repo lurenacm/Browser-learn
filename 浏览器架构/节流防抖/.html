@@ -9,7 +9,11 @@
     .container{
         /* font-size: 0px; */
         width: 600px;
-        height: 200px;
+        /* height: 200px; */
+    }
+    body{
+        min-height: 1000px;
+        overflow-y: auto;
     }
     .left{
         /* font-size: 12px; */
@@ -41,26 +45,70 @@ function handel(event) {
 
 box.onclick = debounce(handel, 500, true)
 
-function debounce(callback, wait, immediate) {
-    if (typeof callback !== "function") throw new TypeError("func must be an function")
-    if (typeof wait == "undefined") wait = 500
-    if (typeof wait === "boolean") {
-        immediate = wait
-        wait = 500
-    }
-    if (typeof immediate !== "boolean") immediate = false
+// function debounce(callback, wait, immediate) {
+//     if (typeof callback !== "function") throw new TypeError("func must be an function")
+//     if (typeof wait == "undefined") wait = 500
+//     if (typeof wait === "boolean") {
+//         immediate = wait
+//         wait = 500
+//     }
+//     if (typeof immediate !== "boolean") immediate = false
 
+//     let timer = null
+//     return function proxy(...params) {
+//         let self = this
+//         let now = immediate && !timer;
+//         clearTimeout(timer)
+//         timer = setTimeout(() => {
+//             timer = null
+//             !immediate ? callback.call(self, ...params) : null
+//         }, wait)
+//         now ? callback.call(self, ...params) : null
+//     }
+// }
+
+function debounce(func, timeout){
     let timer = null
-    return function proxy(...params) {
+    return function(...args) {
         let self = this
-        let now = immediate && !timer;
         clearTimeout(timer)
         timer = setTimeout(() => {
-            timer = null
-            !immediate ? callback.call(self, ...params) : null
-        }, wait)
-        now ? callback.call(self, ...params) : null
+           func.call(self, ...args) 
+        }, timeout);
+    }    
+}
+
+window.onscroll = throttle(handel, 2000)
+
+function handel(event, ...params){
+    console.log('ok')
+    console.log(event, ...params)
+}
+
+// function throttle(func, timeout) {
+//     let self = this
+//     let flag = false
+//     return function (...args) {
+//         if (false) return
+//         setTimeout(() => {
+//             flag = true
+//             func.call(self, ...args)
+//         }, timeout);
+//     }
+// }
+
+function throttle(func, timeout) {
+    let flag = false
+    return function (...args) {
+        let self = this
+        if (flag) return
+        flag = true
+        setTimeout(() => {
+            flag = false
+            func.call(self, ...args)
+        }, timeout);
     }
 }
+
 </script>
 </html>
