@@ -83,14 +83,19 @@ window.onscroll = throttle(handel, 500)
 
 // function 
 
-function debounce(func, timeout){
+function debounce(func, timeout) {
     let timer = null
-    return function(...args) {
+    return function (...args) {
         let self = this
         clearTimeout(timer)
         timer = setTimeout(() => {
-           func.call(self, ...args) 
+            func.call(self, ...args)
         }, timeout);
-    }    
+    }
 }
 
+
+
+function jsonp() {
+
+}

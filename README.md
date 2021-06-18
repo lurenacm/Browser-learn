@@ -9,6 +9,7 @@
 
 ### [节流防抖实现](https://github.com/lurenacm/Browser-learn/issues/4)
 
+### [XSS 攻击和 CSRF 攻击](https://github.com/lurenacm/Browser-learn/issues/6)
 
 <!-- 
 提前批
