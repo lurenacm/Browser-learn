@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function jsonp(url, callback) {
+        let script;
+        url = url.includes('?') ? `${url}&${callback}` : `${url}?${callback}`
+        script = document.createElement('script')
+        script.src = url
+        document.body.appendChild(script)
+        window['callback'] = callback
+        let name = `callback`
+        window[name] = (data) =>{
+            callback && callback(data)
+        }
+    }
+
+    jsonp('https://ac.dun.163.com/v2/config/js', (data) => {
+        console.log(data)
+    })
+</script>
+
+</html>

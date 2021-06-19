@@ -1,0 +1,19 @@
+{
+  "name": "brower",
+  "version": "1.0.0",
+  "description": "<!-- \r 提前批\r 京东",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lurenacm/Browser-learn.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lurenacm/Browser-learn/issues"
+  },
+  "homepage": "https://github.com/lurenacm/Browser-learn#readme"
+}
